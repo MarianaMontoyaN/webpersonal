@@ -20,6 +20,8 @@ $to = new \SendGrid\Email(null, $addressee);
 $content = new \SendGrid\Content("text/plain", $letter);
 $mail = new \SendGrid\Mail($from, $subject, $to, $content);
 
+var_dump($mail);
+
 $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
