@@ -4,6 +4,6 @@
     }
 },
 "require": {
-    "sendgrid/sendgrid": "~5.0.9"
-}
+        "sendgrid/sendgrid": "^7.8"
+    }
 }
