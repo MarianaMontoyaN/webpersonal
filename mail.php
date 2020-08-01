@@ -14,5 +14,6 @@
 
     echo "YA ENTRE";
     echo "$addressee -- $subject -- $letter";
+    header("Location:index.php");
 
 ?>
