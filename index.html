@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Mariana Montoya</title>
+        <link rel="icon" type="image/png" href="images/logo.png">
+        <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kalam&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Sniglet&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header class="header">
+            <h4>Mariana Montoya Naranjo</h4>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="#perfil">Perfil</a>
+                    </li>
+                    <li>
+                        <a href="#portafolio">Portafolio</a>
+                    </li>
+                    <li>
+                        <a href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero" id="perfil">
+            <div class="container-photo">
+                <img class="hero-photo" src="images/FOTO.png" alt="Foto principal" width="200px">
+            </div>
+            <div class="profile">
+                <p>Hola, mi nombre es <strong>Mariana Montoya</strong>. </br>
+                    Soy estudiante de último semestre de Bioingeniería en la Universidad de Antioquia. </br> 
+                    Apasionada por el mundo del desarrollo web y la inteligencia artificial. </br>
+                    Autodidácta y dispuesta a enfrentar nuevos retos.
+                </p>
+            </div>
+        </section>
+        <section class="portafolio" id="portafolio"> 
+            <h2>Portafolio</h2>
+            <article class="project">
+                <div class="project-details">
+                    <h3>el conocimiento</h3>
+                    <h4>Community Manager</h4>
+                    <h5><br> Creación y administración de una comunidad de casi 700.000 seguidores en instagram.<br>
+                    diseño y elaboración de contenido con ayuda de la herramienta Illustrator, impulso de marcas y productos digitales.</h5>
+                </div>
+                <figure class="project-imageContainer">
+                    <img src="images/elConocimiento.png" alt="imagen1" width="400px">
+                </figure>
+            </article>
+            <article class="project">
+                <div class="project-details">
+                    <h3>medidor de engagement</h3>
+                    <h4>Aplicación de escritorio</h4>
+                    <h5><br> Aplicación desarrollada en Python usando Selenium que mide el engagement de una página de instagram. <br>
+                    Toma métricas como Likes, Comentarios, posts guardados y posts compartidos y con estos valores <br>
+                    determina el grado de fidelización por parte de los seguidores a una cuenta de instagram.</h5>
+                </div>
+                <figure class="project-imageContainer">
+                    <img src="" alt="imagen2">
+                </figure>
+            </article>
+            <article class="project">
+                <div class="project-details">
+                    <h3>evaluador de contenido</h3>
+                    <h4>Aplicación de escritorio</h4>
+                    <h5><br> Aplicación desarrollada en Python usando Selenium que revisa el contenido de una cuenta de Instagram <br>
+                    evalúa los Likes de las publicaciones y guarda en un archivo .cvs los links de las imágenes que tienen Likes <br>
+                    por encima de un percentil ingresado.</h5>
+                </div>
+                <figure class="project-imageContainer">
+                    <img src="" alt="imagen2">
+                </figure>
+            </article>
+            <article class="project">
+                <div class="project-details">
+                    <h3>página web personal</h3>
+                    <h4>Portafolio online</h4>
+                    <h5><br> Página web desarrollada con HTML, CSS y PHP.</h5>
+                </div>
+                <figure class="project-imageContainer">
+                    <img src="images/paginaWeb.png" alt="pagina web" width="400px">
+                </figure>
+            </article>
+        </section>
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <div class="logos">
+                <img class="skills-web" src="images/web.png" alt="HTML-CSS-JS" width="150px">
+                <img class="skills-python" src="images/python.png" alt="Python"width="60px">
+                <img class="skills-php" src="images/php.png" alt="PHP" width="100px">
+                <img class="skills-illustrator" src="images/illustrator.png" alt="Illustrator" width="70px">
+            </div>
+        </section>
+        <section class="contact" id="contacto">
+            <div class="containerContact-info">
+                <div class="contact-info">
+                    <h2>información de contacto</h2>
+                </div>
+                <div class="info-items">
+                    <p><span class="email">mariana.montoyan@udea.edu.co</span></p>
+                    <p><span class="phone">+57 3137154760</span></p>
+                    <p><span class="city">Medellín, Colombia.</span></p>
+                </div>
+            </div>
+
+            <form action="mail.php" class="form-email" method="POST">
+                <h2>envíame un email</h2>
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="asunto" placeholder="Asunto" required>
+                <input class="data-message" name="mensaje" type="textarea" placeholder="Mensaje" required>
+                <button>ENVIAR</button>
+            </form>
+        </section>
+        <section class="social">
+            <a href="https://instagram.com/marimontoyan" target="_blank"> <img src="images/instagram.png" alt="Instagram"> </a>
+            <a href="https://www.facebook.com/mariana.montoya.5205622/" target="_blank"> <img src="images/facebook.png" alt="Facebook"> </a>
+        </section>
+        <footer class="footer">
+            <h4>Mariana Montoya Naranjo</h4>
+            <div class="footer-email">
+                <a href="mailto:mariana.montoyan@udea.edu.co">mariana.montoyan@udea.edu.co</a>
+            </div>
+        </footer>
+    </body>
+
+</html>

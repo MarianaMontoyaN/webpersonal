@@ -1,0 +1,335 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eeddda;
+}
+
+/* HEADER */
+
+.header{
+    background-color: #082742;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    padding: 5px 0px;
+    position: relative;
+    z-index: 2;
+}
+
+.header a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 20px 0px 10px ;
+}
+
+.header ul{
+    list-style: none;
+    font-family: 'Itim', sans-serif;
+    display: flex;
+}
+
+.header h4{
+    font-family: 'Itim', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: lighter;
+    padding-left: 20px;
+}
+
+/* HERO */
+
+.hero::before {
+    content: '';
+    width: 100%;
+    height: 76%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: #082742;
+    opacity: 0.6;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    height: 500px;
+    width: 1520px;
+    background-position: center center;
+}
+
+.container-photo {
+    background-color: #082742;
+    margin-top: 20px;
+    padding: 10px 0px;
+    height: 240px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px ;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-photo{
+    height: 220px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile {
+    margin-top: 35px;
+    text-align: center;
+    font-family: 'kalam', sans-serif;
+    font-size: 25px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* PORTAFOLIO */
+
+.portafolio{
+    width: 1200px;
+    background: #082742;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    margin: 65px auto;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    margin: 0px;
+}
+
+.portafolio h2{
+    margin: 15px auto 20px auto;
+    text-align: center;
+    font-family: 'Itim', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #fff;
+}
+
+.project{
+    background-color: #e3e4e5;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #082742;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px 15px;
+    width: 1000px;
+}
+
+.project h3{
+    font-family: 'Itim', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 23px;
+}
+
+.project h4{
+    font-family: 'Itim', sans-serif;
+    font-size: 20px;
+}
+
+.project h5{
+    font-family: 'Sniglet', sans-serif;
+    font-size: 18px;
+}
+
+.project-imageContainer img{
+    border-radius: 10px;
+}
+
+
+/* HABILIDADES */
+
+.skills {
+    background: #082742;
+    margin: 70px auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.skills h2{
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Itim', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 30px;
+}
+
+.logos{
+    padding: 40px 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* CONTACTO - FORMULARIO*/
+.contact {
+    background-color: #082742;
+    display: flex;
+    justify-content: space-evenly;
+    width: 900px;
+    height: 530px;
+    margin: 50px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.containerContact-info::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: #082742;
+    opacity: 0.8;
+}
+
+.containerContact-info {
+    width: 42%;
+    position: relative;
+
+    background-image: url(../images/contacto.jpg);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.contact-info,
+.info-items {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.contact-info{
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-family: 'Itim', sans-serif;
+    font-size: 16px;
+}
+
+.info-items{
+    font-family: 'Itim', sans-serif;
+    font-size: 20px;
+}
+
+.info-items p{
+    margin: 10px auto;
+    text-align: center;
+}
+
+.form-email {
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-email h2{
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Itim', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.form-email input{
+    margin: 10px 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 33px;
+    padding: 3px 10px;
+    width: 80%;
+}
+
+.form-email .data-message {
+    height: 90px;
+} 
+
+.form-email button{
+    width: 80%;
+    height: 40px;
+    margin: 10px 30px;
+    border-radius: 5px;
+    font-family: 'Itim', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+/* REDES SOCIALES */
+
+.social{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.social a img{
+    width: 50px;
+    margin: 10px 10px;
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: #082742;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    padding: 5px 0px;
+}
+
+.footer h4{
+    font-family: 'Itim', sans-serif;
+    color: white;
+    font-size: 18px;
+    font-weight: lighter;
+    padding-left: 20px;
+}
+
+.footer-email{
+    padding-right: 20px;
+}
+
+.footer-email a{
+    font-family: 'Itim', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: white;
+}
