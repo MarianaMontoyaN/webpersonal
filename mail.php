@@ -15,7 +15,7 @@ $letter .= "Mensaje: $message";
 echo "$addressee - $letter";
 
 $email = new \SendGrid\Mail\Mail(); 
-$email->setFrom("test@example.com", $name);
+$email->setFrom($name, "Example User");
 $email->setSubject($subject);
 $email->addTo($addressee, "Example User");
 $email->addContent("text/plain", $letter);
@@ -30,6 +30,5 @@ try {
     print $response->body() . "\n";
 } catch (Exception $e) {
     echo 'Caught exception: '. $e->getMessage() ."\n";
-}
 
 ?>
