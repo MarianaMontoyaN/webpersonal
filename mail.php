@@ -1,19 +1,29 @@
 <?php
 
-    $addressee = 'mariana.montoyan@udea.edu.co';
-    $name = $_POST['nombre'];
-    $email = $_POST['email'];
-    $subject = $_POST['asunto'];
-    $message = $_POST['mensaje'];
+require 'vendor/autoload.php';
 
-    $letter = "De: $name \n";
-    $letter .= "Email: $email \n";
-    $letter .= "Mensaje: $message";
+$addressee = 'mariana.montoyan@udea.edu.co';
+$name = $_POST['nombre'];
+$email = $_POST['email'];
+$subject = $_POST['asunto'];
+$message = $_POST['mensaje'];
 
-    mail($addressee, $subject, $letter);
+$letter = "De: $name \n";
+$letter .= "Email: $email \n";
+$letter .= "Mensaje: $message";
 
-    echo "YA ENTRE";
-    echo "$addressee -- $subject -- $letter";
-    header("index.php");
+
+$from = new SendGrid\Email(null, $email);
+$to = new SendGrid\Email(null, $addressee);
+$content = new SendGrid\Content("text/plain", $letter);
+$mail = new SendGrid\Mail($from, $subject, $to, $content);
+
+$apiKey = getenv('SENDGRID_API_KEY');
+$sg = new \SendGrid($apiKey);
+
+$response = $sg->client->mail()->send()->post($mail);
+echo $response->statusCode();
+echo $response->headers();
+echo $response->body();
 
 ?>

@@ -1,0 +1,9 @@
+{"autoload": {
+    "psr-4": {
+        "\\": "/"
+    }
+},
+"require": {
+    "sendgrid/sendgrid": "~5.0.9"
+}
+}
