@@ -14,20 +14,22 @@ $letter .= "Mensaje: $message";
 
 echo "$addressee - $letter";
 
-
-$from = new \SendGrid\Email(null, $email);
-$to = new \SendGrid\Email(null, $addressee);
-$content = new \SendGrid\Content("text/plain", $letter);
-$mail = new \SendGrid\Mail($from, $subject, $to, $content);
-
-var_dump($mail);
-
-$apiKey = getenv('SENDGRID_API_KEY');
-$sg = new \SendGrid($apiKey);
-
-$response = $sg->client->mail()->send()->post($mail);
-echo $response->statusCode();
-echo $response->headers();
-echo $response->body();
+$email = new \SendGrid\Mail\Mail(); 
+$email->setFrom("test@example.com", $name);
+$email->setSubject($subject);
+$email->addTo($addressee, "Example User");
+$email->addContent("text/plain", $letter);
+$email->addContent(
+    "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+);
+$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+try {
+    $response = $sendgrid->send($email);
+    print $response->statusCode() . "\n";
+    print_r($response->headers());
+    print $response->body() . "\n";
+} catch (Exception $e) {
+    echo 'Caught exception: '. $e->getMessage() ."\n";
+}
 
 ?>
